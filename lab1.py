@@ -50,3 +50,33 @@ print(lista)
 def fun7(krotka):
     return tuple(krotka)
 print(fun7(lista))
+
+#Zad 8
+lista=[]
+for x in range(5):
+    a=input("Podaj wartość:")
+    lista.append(a)
+krotka=tuple(x for x in lista)
+print(krotka)
+
+#Zad 9
+def fun9(x):
+    return{
+        1:'Poniedziałek',
+        2:'Wtorek',
+        3:'Środa',
+        4:'Czwartek',
+        5:'Piątek',
+        6:'Sobota',
+        7:'Niedziela',
+    }.get(x,'Zły dzień tygodnia')
+print(fun9(6))
+
+#Zad 10
+def fun10(tekst):
+    for x in range(int(len(tekst)/2)):
+        if(tekst[x]!=tekst[(len(tekst)-1)-x]):
+            return False
+    return True
+print(fun10('kajak'))
+print(fun10('kajal'))
