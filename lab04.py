@@ -38,10 +38,19 @@ class TreeNode:
         else:
             self.data = data
 
+    #def for_each_deep_first(self, visit:Callable[['TreeNode'], None]) -> None:
+    
+    #def for_each_level_order(self, visit:Callable[['TreeNode'], None]) -> None:
+    
+    #def search(self, value: Any) -> Union['TreeNode', None]:
+
 
 root = TreeNode(5)
 root.add(10)
 root.add(15)
 root.add(12)
 root.add(30)
+root.add(40)
+root.add(11)
+root.add(9)
 root.print()
