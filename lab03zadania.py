@@ -54,8 +54,13 @@ print("============================")
 
 #Zad 4
 
-# def reverse(txt:str):
-#     if(txt[i] == 0):
+def reverse(txt:str):
+    if len(txt) == 0:
+        return txt
+    else:
+       return reverse(txt[1:])+txt[0]
+
+print(reverse("123456789"))
 
 print("============================")
 
@@ -73,16 +78,44 @@ print("============================")
 
 #Zad 6
 
-def prime(n:int):
-    if(n != 0):
-        if(n % (n - 1) != 0):
-            return 1
-            prime(n - 1)
-        else:
-            return 0
+def prime(n:int, i=2) -> bool:
+    if n==i:
+        return True
+    elif n%i==0:
+        return False
+    return prime(n,i+1)
 
+print(prime(5))
 
-print(prime(4))
+print("============================")
+
+#Zad 7
+
+def n_sums(liczby:int, lista=[]):
+    if liczby > 100:
+        return lista
+    temp = [int(x) for x in str(liczby)]
+    print(temp)
+    if sum(temp[::2]) == sum(temp[1::2]):
+        lista.append(liczby)
+    return n_sums(liczby + 1, lista)
+print(n_sums(3))
+
+print("============================")
+
+#Zad 9
+
+def remove_duplicates(txt:str) -> str:
+    if len(txt) == 1:
+        return txt[0]
+    elif txt[0] != txt[1]:
+        return txt[0] + remove_duplicates(txt[1:])
+    else:
+        return remove_duplicates(txt[1:])
+
+print(remove_duplicates("1233456"))
+
+print("============================")
 
 
 
