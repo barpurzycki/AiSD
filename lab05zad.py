@@ -54,12 +54,12 @@ class BinaryTree:
     def __init__(self, root):
         self.root: 'BinaryNode' = root
 
-    def traverse_in_order(self, value: Callable[[Any], None]):
-       self.root.traverse_in_order(value)
-    def traverse_post_order(self, value: Callable[[Any], None]):
-       self.root.traverse_post_order(value)
-    def traverse_pre_order(self, value: Callable[[Any], None]):
-        self.root.traverse_pre_order(value)
+    def traverse_in_order(self, visit: Callable[[Any], None]):
+       self.root.traverse_in_order(visit)
+    def traverse_post_order(self, visit: Callable[[Any], None]):
+       self.root.traverse_post_order(visit)
+    def traverse_pre_order(self, visit: Callable[[Any], None]):
+        self.root.traverse_pre_order(visit)
 
 
 
