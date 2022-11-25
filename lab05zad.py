@@ -23,7 +23,7 @@ class BinaryNode:
         self.right_child = value
 
     def traverse_in_order(self, visit:Callable[[Any], None]):
-        
+
 
     def traverse_post_order(self, visit: Callable[[Any], None]):
 
@@ -33,3 +33,19 @@ class BinaryNode:
 
     def __str__(self):
         return self.value
+
+
+class BinaryTree:
+    root: BinaryNode
+
+    def __init__(self, root):
+        self.root: 'BinaryNode' = root
+
+    # def traverse_in_order(self, value: Callable[[Any], None]):
+    # 
+    # def traverse_post_order(self, value: Callable[[Any], None]):
+    # 
+    # def traverse_pre_order(self, value: Callable[[Any], None]):
+
+    #def show(self):
+
