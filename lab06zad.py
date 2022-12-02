@@ -10,10 +10,12 @@ class BinaryNode:
         self.left_child = left_child
         self.right_child = right_child
 
-    def min(self):
-        
+    def min(self, BinaryNode):
+        wart = BinaryNode
+        while wart.left_child is not None:
+            wart = wart.left_child
 
-
+        return wart.value
 
 class BinarySearchTree:
     root: BinaryNode
@@ -21,8 +23,8 @@ class BinarySearchTree:
     def __init__(self, root):
         self.root: 'BinaryNode' = root
 
-    # def insert(self, value: Any) -> None:
-    #
+    def insert(self, value: Any) -> None:
+        
     # def _insert(self, node: BinaryNode, value: Any) -> BinaryNode:
     #
     # def insert_list(self, list_: List[Any]) -> None:
