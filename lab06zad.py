@@ -1,5 +1,5 @@
 from typing import Any
-
+from classes import List
 
 class BinaryNode:
     value: Any
@@ -34,8 +34,9 @@ class BinarySearchTree:
 
     def __insert(self, node: BinaryNode, value: Any) -> BinaryNode:
 
-# def insert_list(self, list_: List[Any]) -> None:
-#
+    def insert_list(self, list_: List[Any]) -> None:
+        for i in list_:
+            self.insert(i)
 # def contains(self, value: Any) -> bool:
 #
 # def remove(self, value: Any) -> None:
