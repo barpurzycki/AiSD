@@ -1,5 +1,6 @@
 from typing import Any
 
+
 class BinaryNode:
     value: Any
     left_child: 'BinaryNode'
@@ -14,8 +15,11 @@ class BinaryNode:
         wart = BinaryNode
         while wart.left_child is not None:
             wart = wart.left_child
-
         return wart.value
+
+    def __str__(self):
+        return str(self.value)
+
 
 class BinarySearchTree:
     root: BinaryNode
@@ -24,15 +28,18 @@ class BinarySearchTree:
         self.root: 'BinaryNode' = root
 
     def insert(self, value: Any) -> None:
-        
-    # def _insert(self, node: BinaryNode, value: Any) -> BinaryNode:
-    #
-    # def insert_list(self, list_: List[Any]) -> None:
-    #
-    # def contains(self, value: Any) -> bool:
-    #
-    # def remove(self, value: Any) -> None:
-    #
-    # def _remove(self, node: BinaryNode, value: Any) -> BinaryNode:
-    #
-    # def show(self):
+        if self.value == value:
+            return
+        self.root = self.__insert(self.root, value)
+
+    def __insert(self, node: BinaryNode, value: Any) -> BinaryNode:
+
+# def insert_list(self, list_: List[Any]) -> None:
+#
+# def contains(self, value: Any) -> bool:
+#
+# def remove(self, value: Any) -> None:
+#
+# def __remove(self, node: BinaryNode, value: Any) -> BinaryNode:
+#
+# def show(self):
