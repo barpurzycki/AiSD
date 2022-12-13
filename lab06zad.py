@@ -1,5 +1,4 @@
-from typing import Any
-from classes import List
+from typing import Any, List
 
 class BinaryNode:
     value: Any
