@@ -16,6 +16,7 @@ class Vertex:
 
     def __init__(self, data, index):
         self.data = data
+        self.index = index
 
 
 class Edge:
